@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Trirong:ital@1&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+main {
+  font-family: 'Trirong', serif; 
+  display: grid;
+  background: linear-gradient(0deg, #6C416C, #3E1F47 );
+  color: #AB94AB;
+}
+#welcome-section{
+  margin-top: 100px;
+  text-align: center;
+  font-size: 40px;
+  height: 100vh;
+  scroll-margin-top: 2em;
+  
+}
+
+h2{
+  font-size: 30px; 
+}
+#navbar{
+  height: 2em;
+  width: 100vw;
+  position: fixed;
+  grid-area: 1;
+  justify-self: end;
+  background-color: #3E1F47; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: flex-end; 
+  box-shadow: 3px 0 10px #231129;
+}
+
+.nav-link{
+  margin-left: 100px;
+  font-size: 20px;
+  color: #AB94AB;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-link:hover{
+  box-shadow: 0 0 5px 5px #AB94AB;
+  background-color: #AB94AB;
+  color:#3E1F47;
+}
+#projects{
+  text-align: center;
+  margin-top: 100px;
+  height: 100vh;
+  scroll-margin-top: 2em;
+  
+}
+
+#contacts-section{
+  text-align: center;
+}
+
+
+.projects-grid{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project-tile{
+  color: #AB94AB;
+  padding: 20px;
+  margin: 10px;
+}
+.project-tile:hover{
+   box-shadow: 0 0 5px 5px #AB94AB;
+}
+
+@media (max-width: 500px){
+  .nav-link{
+    text-align: center;
+    font-size: 15px;
+  }
+ 
+}
+#contacts-section{
+  margin-top: 300px;
+  height: 100vh;
+  scroll-margin-top: 2em;
+}
+.personal-link{
+  display: flex;
+  justify-content: center;
+}
+
+.link{
+  color: white;
+  margin: 2em;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 1em;
+}
+
+.link:hover{
+  box-shadow: 0 0 5px 5px #AB94AB;
+  padding: 1em;
+}
