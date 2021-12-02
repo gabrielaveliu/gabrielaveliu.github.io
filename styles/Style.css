@@ -16,17 +16,29 @@ main {
 
 #welcome-section{
   margin-top: 100px;
-  text-align: center;
   font-size: 40px;
   height: 100vh;
   scroll-margin-top: 2em;
   animation-name: welcome;
   animation-duration: 4s;
-
+  text-align: center;
 }
 
 h2{
-  font-size: 30px; 
+  font-size: 30px;  
+}
+
+.about-me{
+  margin-top: 3em;
+}
+
+#welcome-section > p{
+  padding:1em 2em 0 1em;
+  display: grid;
+  grid-template-rows: min-content;
+  align-items: center;
+  font-size: 19px;
+
 }
 
 @keyframes welcome{
@@ -44,11 +56,55 @@ h2{
   
 }
 
-#contacts-section{
-  text-align: center;
+.projects-grid{
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-evenly;
 }
 
+.project-tile{
+  color: var(--font-color);
+  padding: 50px;
+  margin: 10px 10px 10px 10px;
+  font-size: 15px;
+  text-decoration: none;
+  border: #6C416C solid 1px;
+}
 
+.project-tile:hover{
+   box-shadow: 0 0 5px 5px var(--font-color);
+}
+
+#contacts-section{
+  text-align: center;
+  margin-top: 100px;
+  height: 100vh;
+  scroll-margin-top: 2em;
+  font-size: 25px;
+  padding-top: 50px;
+}
+#contacts-section > p{
+  text-align: center;
+  font-size: 17px;
+}
+.personal-link{
+  display: flex;
+  justify-content: center;
+}
+
+.link{
+  color: var(--font-color);
+  margin: 2em;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 1em;
+  border:#6C416C solid 1px
+}
+
+.link:hover{
+  box-shadow: 0 0 5px 5px var(--font-color);
+  padding: 1em;
+}
 
 #navbar{
   height: 2em;
@@ -57,9 +113,7 @@ h2{
   grid-area: 1;
   justify-self: end;
   background-color: var(--main-color); 
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 20px;
+  padding: 20px 20px 20px 10px;
   display: flex;
   justify-content: flex-end; 
   box-shadow: 3px 0 10px #231129;
@@ -71,6 +125,7 @@ h2{
   color: var(--font-color);
   text-decoration: none;
   font-weight: bold;
+
 }
 
 .nav-link:hover{
@@ -80,65 +135,44 @@ h2{
 }
 
 
-.projects-grid{
-  display: flex;
-  justify-content: space-evenly;
-}
+@media (max-width: 700px){
 
-.project-tile{
-  color: var(--font-color);
-  padding: 20px;
-  margin: 10px;
-  font-size: 15px;
-}
-
-.project-tile:hover{
-   box-shadow: 0 0 5px 5px var(--font-color);
-}
-
-@media (max-width: 500px){
-  .nav-link{
-    margin-left: 60px;
-    text-align: center;
-    font-size: 15px;
-  }
   #welcome-section{
     font-size: 27px;
   }
+
   @keyframes welcome{
     0% { font-size: 1px;}
     
     100% { font-size: 27px;}
   }
+
   #navbar{
       justify-content: center;
       align-items: center;
+    
   }
+  
+  .nav-link{
+    margin-left: 60px;
+    text-align: center;
+    font-size: 15px;
+  }
+
   h2{
     font-size: 22px;
   }
- 
-}
-#contacts-section{
-  margin-top: 300px;
-  height: 100vh;
-  scroll-margin-top: 2em;
-}
-.personal-link{
-  display: flex;
-  justify-content: center;
-}
+  .projects-grid{
+    flex-direction: column;
+  }
 
-.link{
-  color: white;
-  margin: 2em;
-  font-size: 20px;
-  text-decoration: none;
-  padding: 1em;
+  #welcome-section > p{
+    font-size: 15px;
+  }
+  #contacts-section > p{
+    font-size: 15px;
+  }
+  .personal-link > .link{
+    font-size: 15px;
+  }
 }
-
-.link:hover{
-  box-shadow: 0 0 5px 5px var(--font-color);
-  padding: 1em;
-}
-
